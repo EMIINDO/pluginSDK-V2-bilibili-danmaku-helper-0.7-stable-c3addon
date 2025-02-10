@@ -1,0 +1,218 @@
+{
+  "languageTag": "zh-CN",
+  "fileDescription": "哔哩哔哩弹幕",
+  "text": {
+    "plugins": {
+      "idovehelper_biliopen": {
+        "name": "哔哩哔哩直播助手",
+        "description": "一个接收哔哩哔哩直播弹幕与各种事件触发游戏脚本的插件，基于B站直播开放平台API",
+        "help-url": "https://helper.hz.idove.games:8/Document/",
+        "properties": {
+          "test-property": {
+            "name": "[测试]哔哩哔哩直播助手",
+            "desc": "测试用，无实际用处"
+          }
+        },
+        "aceCategories": {
+          "connect": "连接",
+          "trigger": "触发",
+          "return": "返回值"
+        },
+        "conditions": {
+          "NewEnter": {
+            "list-name": "进房事件",
+            "display-text": "有新观众进入直播间",
+            "description": "接收到观众进入直播间提示触发此事件",
+            "params": {}
+          },
+          "NewDanmaku": {
+            "list-name": "弹幕事件",
+            "display-text": "接收到新弹幕",
+            "description": "接收到弹幕时触发此事件",
+            "params": {}
+          },
+          "NewEmojiDanmaku": {
+            "list-name": "表情包弹幕事件",
+            "display-text": "接收到新表情包弹幕",
+            "description": "接收到表情包弹幕时触发此事件",
+            "params": {}
+          },
+          "NewGift": {
+            "list-name": "礼物事件",
+            "display-text": "接收到新礼物",
+            "description": "接收到礼物时触发此事件",
+            "params": {}
+          },
+          "NewLike": {
+            "list-name": "点赞事件",
+            "display-text": "接收到点赞",
+            "description": "接收到点赞触发此事件",
+            "params": {}
+          },
+          "AppStart": {
+            "list-name": "开平项目启动成功",
+            "display-text": "开平项目启动成功",
+            "description": "BiliBili直播开放平台的项目启动成功后触发",
+            "params": {}
+          },
+          "LiveStart": {
+            "list-name": "直播开始",
+            "display-text": "直播关闭",
+            "description": "直播间推流开播成功后触发",
+            "params": {}
+          },
+          "LiveEnd": {
+            "list-name": "直播关闭",
+            "display-text": "直播关闭",
+            "description": "直播间下播或被超管掐断后触发",
+            "params": {}
+          },
+          "SessionClosed": {
+            "list-name": "监听被关闭",
+            "display-text": "监听被关闭",
+            "description": "开放平台判定本插件或游戏停止运行后触发，触发后会停止下发数据",
+            "params": {}
+          }
+        },
+        "actions": {
+          "QuickConnect": {
+            "list-name": "快速连接",
+            "display-text": "通过身份码直接监听直播间",
+            "description": "通过直播身份码连接到BiliBili直播开放平台",
+            "params": {
+              "AuthCode": {
+                "name": "主播身份码",
+                "desc": "play-live.bilibili.com 右下角可以查询，请注意未提审上架产品不能在他人直播间使用"
+              },
+              "LiveRoomID": {
+                "name": "主播直播间号",
+                "desc": "对应的直播间号码"
+              }
+            }
+          },
+          "AdvancedConnect": {
+            "list-name": "自定义连接",
+            "display-text": "使用自己的开放平台开发者权限监听直播间",
+            "description": "使用自己的开放平台开发者权限和项目监听直播间",
+            "params": {
+              "AuthCode": {
+                "name": "主播身份码",
+                "desc": "play-live.bilibili.com 右下角可以查询，请注意未提审上架产品不能在他人直播间使用"
+              },
+              "LiveRoomID": {
+                "name": "主播直播间号",
+                "desc": "对应的直播间号码"
+              }
+            }
+          },
+          "ConnectToBiliOpen": {
+            "list-name": "使用B站直播开放平台开发者连接",
+            "display-text": "使用B站直播开放平台开发者连接",
+            "description": "使用自己的开发者权限连接到B站直播开放平台",
+            "params": {
+              "Code": {
+                "name": "主播身份码",
+                "desc": "play-live.bilibili.com 右下角可以查询，请注意未提审上架产品不能在他人直播间使用"
+              },
+              "AppID": {
+                "name": "AppID",
+                "desc": "B站直播开放平台创建项目后把项目的AppID填入这里"
+              },
+              "DeveloperKey": {
+                "name": "DeveloperKey",
+                "desc": "B站直播开放平台的开发者Key"
+              },
+              "DeveloperSecret": {
+                "name": "DeveloperSecret",
+                "desc": "B站直播开放平台的开发者秘钥"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "OpenID": {
+            "description": "OpenID，加密过的UID，开发者不变的情况下OpenID不变，每个开发者账号之间每个用户的OpenID都不一样",
+            "translated-name": "通用 OpenID",
+            "params": {}
+          },
+          "昵称": {
+            "description": "B站用户的昵称，中文用户名",
+            "translated-name": "通用 昵称",
+            "params": {}
+          },
+          "头像链接": {
+            "description": "用户头像的URL网址",
+            "translated-name": "通用 头像链接",
+            "params": {}
+          },
+          "舰队状态": {
+            "description": "用户的上舰状态，可能的值为 未上舰、舰长、提督、总督",
+            "translated-name": "通用 舰队状态",
+            "params": {}
+          },
+          "粉丝团等级": {
+            "description": "用户在当前直播间的粉丝团等级，如果未正确悬挂粉丝牌可能为0，建议开启强制粉丝进房时临时自动更换为当前直播间粉丝牌",
+            "translated-name": "通用 粉丝团等级",
+            "params": {}
+          },
+          "时间戳": {
+            "description": "UNIX时间戳，即1970年1月1日0点0分0秒至今的秒数，由B站服务器提供，为事件的发生时间",
+            "translated-name": "通用 时间戳",
+            "params": {}
+          },
+          "时间": {
+            "description": "由上述时间戳转换而来的人类友好时间输出",
+            "translated-name": "通用 时间",
+            "params": {}
+          },
+          "JSON": {
+            "description": "以JSON格式输出当前事件内容",
+            "translated-name": "通用 JSON",
+            "params": {}
+          },
+          "摘要": {
+            "description": "一句话概述当前内容，用于日志和留档",
+            "translated-name": "通用 摘要",
+            "params": {}
+          },
+          "弹幕内容": {
+            "description": "弹幕的内容，仅限弹幕获取",
+            "translated-name": "弹幕 内容",
+            "params": {}
+          },
+          "礼物ID": {
+            "description": "B站系统的礼物ID，用于区分具体礼物，比如上舰送的价值1000银瓜子的免费粉丝团灯牌和付费粉丝团灯牌",
+            "translated-name": "礼物 礼物ID",
+            "params": {}
+          },
+          "礼物名称": {
+            "description": "不解释",
+            "translated-name": "礼物 名称",
+            "params": {}
+          },
+          "礼物数量": {
+            "description": "不解释",
+            "translated-name": "礼物 数量",
+            "params": {}
+          },
+          "礼物图片": {
+            "description": "同用户头像，为图片素材的URL链接",
+            "translated-name": "礼物 图片",
+            "params": {}
+          },
+          "礼物电池价值": {
+            "description": "换算后的礼物电池价值(B站提成前)，注意临时打折可能不会正确获取，此时会显示原价格",
+            "translated-name": "礼物 电池价值",
+            "params": {}
+          },
+          "礼物人民币价值": {
+            "description": "换算后的礼物人民币价值(B站提成前)，注意临时打折可能不会正确获取，此时会显示原价格",
+            "translated-name": "礼物 人民币价值",
+            "params": {}
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,35 @@
+{
+  "is-c3-addon": true,
+  "sdk-version": 2,
+  "min-construct-version": "r401",
+  "type": "plugin",
+  "name": "BiliBili OpenLive Helper",
+  "id": "iDoveHelper_BiliOpen",
+  "version": "0.0.7.0",
+  "author": "iDove",
+  "website": "https://helper.hz.idove.games:8/Document/",
+  "documentation": "https://helper.hz.idove.games:8/Document/",
+  "description": "BiliBili OpenLive Helper plugin",
+  "editor-scripts": [
+    "plugin.js",
+    "type.js",
+    "instance.js"
+  ],
+  "file-list": [
+    "c3runtime/main.js",
+    "c3runtime/plugin.js",
+    "c3runtime/type.js",
+    "c3runtime/instance.js",
+    "c3runtime/conditions.js",
+    "c3runtime/actions.js",
+    "c3runtime/expressions.js",
+    "lang/en-US.json",
+    "lang/zh-CN.json",
+    "aces.json",
+    "addon.json",
+    "icon.png",
+    "instance.js",
+    "plugin.js",
+    "type.js"
+  ]
+}

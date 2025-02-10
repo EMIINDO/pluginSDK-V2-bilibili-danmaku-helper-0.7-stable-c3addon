@@ -1,0 +1,87 @@
+{
+
+  "languageTag": "en-US",
+  "fileDescription": "BiliBili Danmu",
+  "text": {
+    "plugins": {
+      "idovehelper_biliopen": {
+        "name": "BiliBili OpenLive Helper",
+        "description": "A plugin to deal with bilidanmu",
+        "help-url": "null",
+        "properties": {
+          "test-property": {
+            "name": "BiliDanmu",
+            "desc": "Deal with bilidanmu"
+          }
+        },
+        "aceCategories": {
+          "connect": "connect",
+          "trigger": "trigger",
+          "return": "return"
+        },
+        "conditions": {
+          "NewDanmaku": {
+            "list-name": "NewDanmaku",
+            "display-text": "NewDanmaku",
+            "description": "Test if NewDanmaku",
+            "params": {}
+          },
+          "NewGift": {
+            "list-name": "NewGift",
+            "display-text": "NewGift",
+            "description": "Test if NewGift",
+            "params": {}
+          },
+          "NewLike": {
+            "list-name": "NewLike",
+            "display-text": "NewLike",
+            "description": "Test if NewLike",
+            "params": {}
+          }
+        },
+        "actions": {
+          "ConnectToBili": {
+            "list-name": "connect to Bili",
+            "display-text": "connect to Bili",
+            "description": "connect to Bili.",
+            "params": {
+              "Code": {
+                "name": "Code",
+                "desc": "Play-Live Code"
+              },
+              "AppID": {
+                "name": "AppID",
+                "desc": "Bilibili OpenLive AppID"
+              },
+              "DeveloperKey": {
+                "name": "DeveloperKey",
+                "desc": "Bilibili OpenLive Developer Key"
+              },
+              "DeveloperSecret": {
+                "name": "DeveloperSecret",
+                "desc": "Bilibili OpenLive Developer Secret"
+              }
+            }
+          }
+        },
+        "expressions": {
+          "message": {
+            "description": "return the message.",
+            "translated-name": "message",
+            "params": {}
+          },
+          "name": {
+            "description": "return the name.",
+            "translated-name": "name",
+            "params": {}
+          },
+          "uid": {
+            "description": "return the uid.",
+            "translated-name": "uid",
+            "params": {}
+          }
+        }
+      }
+    }
+  }
+}

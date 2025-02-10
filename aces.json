@@ -1,0 +1,224 @@
+{
+  "connect": {
+    "actions": [
+      {
+        "id": "QuickConnect",
+        "scriptName": "QuickConnect",
+        "highlight": true,
+        "params": [
+          {
+            "id": "AuthCode",
+            "type": "string"
+          },
+          {
+            "id": "LiveRoomID",
+            "type": "number"
+          }
+        ]
+      },
+      {
+        "id": "AdvancedConnect",
+        "scriptName": "QuickConnect",
+        "highlight": true,
+        "params": [
+          {
+            "id": "AuthCode",
+            "type": "string"
+          },
+          {
+            "id": "AppID",
+            "type": "number"
+          },
+          {
+            "id": "DeveloperKey",
+            "type": "string"
+          },
+          {
+            "id": "DeveloperSecret",
+            "type": "string"
+          },
+          {
+            "id": "LiveRoomID",
+            "type": "number"
+          }
+        ]
+      }
+    ]
+  },
+  "trigger": {
+    "conditions": [
+      {
+        "id": "AppStart",
+        "scriptName": "AppStart",
+        "isTrigger": true,
+        "highlight": true,
+        "params": []
+      },
+      {
+        "id": "LiveStart",
+        "scriptName": "LiveStart",
+        "isTrigger": true,
+        "highlight": false,
+        "params": []
+      },
+      {
+        "id": "LiveEnd",
+        "scriptName": "LiveEnd",
+        "isTrigger": true,
+        "highlight": false,
+        "params": []
+      },
+      {
+        "id": "NewEnter",
+        "scriptName": "NewEnter",
+        "isTrigger": true,
+        "highlight": false,
+        "params": []
+      },
+      {
+        "id": "NewDanmaku",
+        "scriptName": "NewDanmaku",
+        "isTrigger": true,
+        "highlight": true,
+        "params": []
+      },
+      {
+        "id": "NewEmojiDanmaku",
+        "scriptName": "NewEmojiDanmaku",
+        "isTrigger": true,
+        "highlight": false,
+        "params": []
+      },
+      {
+        "id": "NewGift",
+        "scriptName": "NewGift",
+        "isTrigger": true,
+        "highlight": true,
+        "params": []
+      },
+      {
+        "id": "NewLike",
+        "scriptName": "NewLike",
+        "isTrigger": true,
+        "highlight": true,
+        "params": []
+      },
+      {
+        "id": "SessionClosed",
+        "scriptName": "SessionClosed",
+        "isTrigger": true,
+        "highlight": false,
+        "params": []
+      }
+    ]
+  },
+  "return": {
+    "expressions": [
+      {
+        "id": "OpenID",
+        "expressionName": "OpenID",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "昵称",
+        "expressionName": "昵称",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "舰队状态",
+        "expressionName": "舰队状态",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "头像链接",
+        "expressionName": "头像链接",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "粉丝团等级",
+        "expressionName": "粉丝团等级",
+        "highlight": true,
+        "returnType": "number",
+        "params": []
+      },
+      {
+        "id": "摘要",
+        "expressionName": "摘要",
+        "highlight": false,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "时间戳",
+        "expressionName": "时间戳",
+        "highlight": false,
+        "returnType": "number",
+        "params": []
+      },
+      {
+        "id": "时间",
+        "expressionName": "时间",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "弹幕内容",
+        "expressionName": "弹幕内容",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "礼物ID",
+        "expressionName": "礼物ID",
+        "highlight": false,
+        "returnType": "number",
+        "params": []
+      },
+      {
+        "id": "礼物名称",
+        "expressionName": "礼物名称",
+        "highlight": true,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "礼物数量",
+        "expressionName": "礼物数量",
+        "highlight": true,
+        "returnType": "number",
+        "params": []
+      },
+      {
+        "id": "礼物图片",
+        "expressionName": "礼物图片",
+        "highlight": false,
+        "returnType": "string",
+        "params": []
+      },
+      {
+        "id": "礼物电池价值",
+        "expressionName": "礼物电池价值",
+        "highlight": false,
+        "returnType": "number",
+        "params": []
+      },
+      {
+        "id": "礼物人民币价值",
+        "expressionName": "礼物人民币价值",
+        "highlight": true,
+        "returnType": "number",
+        "params": []
+      }
+    ]
+  }
+}
