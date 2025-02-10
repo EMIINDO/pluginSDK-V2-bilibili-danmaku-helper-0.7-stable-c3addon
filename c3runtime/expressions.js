@@ -1,5 +1,4 @@
 "use strict"
-const C3 = globalThis.C3
 {
     globalThis.C3.Plugins.iDoveHelper_BiliOpen.Exps = {
         // 通用信息
